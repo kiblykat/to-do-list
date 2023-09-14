@@ -1,13 +1,36 @@
-import React, { Component } from 'react'
-
+import { useState } from 'react'
 import './App.css'
 
-export default class App extends Component {
-  render() {
+export default function App(){
+
     return (
-      <div className='main'>
-        <h1>App</h1>
-      </div>
+      <>      
+        <form className='new-item-form'>
+          <div className='form-row'>
+            <label>New Item</label>
+            <input
+              type='text' 
+              id='item' />
+          </div>
+          <button className='btn'>Add</button>
+        </form>
+        <h1 className='header'>Todo List</h1>
+        <ul className='list'>
+        <li>
+            <label>
+              <input type='checkbox' id='item' />
+                Item 1
+            </label>
+            <button className='btn btn-danger'>Delete</button>
+          </li>
+          <li>
+            <label>
+              <input type='checkbox'/>
+                Item 2
+            </label>
+            <button className='btn btn-danger'>Delete</button>
+          </li>
+        </ul>
+      </>
     )
-  }
 }
